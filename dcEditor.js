@@ -86,3 +86,20 @@ dcEditor = function(editorid) {
     return this.xmldoc.getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'identifier')[0].textContent;
   };
 };
+Ext.getCmp('searchgridUploadsBtn').menu.add(
+  {
+    text:'Dublin core',
+    handler: function(btn){
+      showUploadDialog('dublincore', 'uploadDC.pl', doUploadMarc);
+    }
+  }
+);
+Ext.getCmp('savegridUploadsBtn').menu.add(
+  {
+    text:'Dublin core',
+    handler:
+      function(btn){
+        showUploadDialog('dublincore', 'uploadDC.pl', doUploadMarc);
+      }
+  }
+);
