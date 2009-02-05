@@ -55,10 +55,6 @@ dcEditor = function(editorid) {
     return true;
   };
 
-  this.update = function() {
-    return true;
-  };
-
   this.getToolsMenu = function() {
     return new Array();
   };
