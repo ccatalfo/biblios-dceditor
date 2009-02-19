@@ -1,0 +1,22 @@
+This is a plugin for the biblios (http://biblios.org) metadata editor to allow editing of records in the Dublin Core XML format (http://dublincore.org/). 
+
+To install and enable it, add these two sections to your biblios configuration file (biblios.xml):
+
+<editor>
+  <name>DublinCoreEditor</name>
+  <syntax>xml</syntax>
+  <enabled>1</enabled>
+</editor>       
+
+
+<plugin>
+  <name>DublinCoreEditor</name>
+  <type>editor</type>
+  <file>plugins/dcEditor/dcEditor.js</file>
+  <initcall>new dcEditor(editorid)</initcall>
+  <enabled>1</enabled>
+  <allowDelete>0</allowDelete>
+  <allowModify>0</allowModify>
+</plugin>
+
+Copy the file dc.xsl to your pazpar2 configuration directory so that pazpar2 can use it to extract metadata elements when performing searching against z39.50 targets which can return dublin core xml records.
