@@ -20,3 +20,7 @@ To install and enable it, add these two sections to your biblios configuration f
 </plugin>
 
 Copy the file dc.xsl to your pazpar2 configuration directory so that pazpar2 can use it to extract metadata elements when performing searching against z39.50 targets which can return dublin core xml records.
+
+Copy the directory in which this file is found to biblios/plugins, making sure that the path to the dcEditor.js file referenced in biblios.xml (see above) is correct.  
+
+Copy uploadDC.pl to your biblios installation's cgi-bin directory.
